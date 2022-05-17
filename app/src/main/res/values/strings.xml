@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Weather</string>
+    <string name="create_city_title">New City name ?</string>
+    <string name="create_city_button">Create City</string>
+    <string name="create_city_cancel">Cancel</string>
+    <string name="create_city_hint">New York, Paris...</string>
+    <string name="menu_create_city_button">Create city</string>
+</resources>
