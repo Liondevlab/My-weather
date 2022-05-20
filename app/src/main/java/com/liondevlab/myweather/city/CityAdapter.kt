@@ -23,7 +23,7 @@ class CityAdapter(private val cities: List<City>,
     }
 
     class ViewHolder(itemView: View) :  RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        val cardView = itemView.findViewById<CardView>(R.id.city_item_cardview)
+        val cardView = itemView.findViewById<CardView>(R.id.city_item_card_view)
         val cityNameView = itemView.findViewById<TextView>(R.id.city_name)
         override fun onClick(v: View?) {
             TODO("Not yet implemented")
@@ -49,7 +49,7 @@ class CityAdapter(private val cities: List<City>,
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.city_item_cardview -> cityListener.onCitySelected(v.tag as City)
+            R.id.city_item_card_view -> cityListener.onCitySelected(v.tag as City)
         }
     }
 }

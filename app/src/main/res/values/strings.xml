@@ -5,4 +5,8 @@
     <string name="create_city_cancel">Cancel</string>
     <string name="create_city_hint">New York, Paris...</string>
     <string name="menu_create_city_button">Create city</string>
+    <string name="location_logo_item">Location Logo</string>
+    <string name="delete_city_button">Delete city</string>
+    <string name="delete_city_cancel">Cancel</string>
+    <string name="delete_city_title">Do you really want to delete this %1$s?</string>
 </resources>
