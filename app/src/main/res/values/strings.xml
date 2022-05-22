@@ -9,4 +9,8 @@
     <string name="delete_city_button">Delete city</string>
     <string name="delete_city_cancel">Cancel</string>
     <string name="delete_city_title">Do you really want to delete this %1$s?</string>
+    <string name="delete_item_button">delete item button</string>
+    <string name="error_message_could_not_create_city">Could not create city</string>
+    <string name="error_message_could_not_delete_city">Could not delete %1$s</string>
+    <string name="info_message_city_has_been_deleted">%1$s has been deleted</string>
 </resources>

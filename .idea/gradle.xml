@@ -16,9 +16,7 @@
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
-        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
-    <option name="offlineMode" value="true" />
   </component>
 </project>

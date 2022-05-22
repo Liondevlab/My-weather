@@ -1,15 +1,15 @@
 package com.liondevlab.myweather.city
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
-import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.liondevlab.myweather.App
 import com.liondevlab.myweather.Database
 import com.liondevlab.myweather.R
+import com.liondevlab.myweather.utils.toast
 
 /**
  * My Weather
@@ -72,14 +72,39 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
         createCityFragment.show(childFragmentManager, "CreateCityDialogFragment")
     }
 
+    private fun showDeleteCityDialog(city: City) {
+        val deleteCityFragment = DeleteCityDialogFragment.newInstance(city.name)
+
+        deleteCityFragment.listener = object: DeleteCityDialogFragment.DeleteCityDialogListener {
+            override fun onDialogPositiveClick() {
+                deleteCity(city)
+            }
+
+            override fun onDialogNegativeClick() { }
+
+        }
+
+        deleteCityFragment.show(childFragmentManager, "DeleteCityDialogFragment")
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
     private fun saveCity(city: City) {
         if (database.createCity(city)) {
             cities.add(city)
             adapter.notifyDataSetChanged()
         } else {
-            Toast.makeText(context,
-            "Could not create city",
-            Toast.LENGTH_SHORT).show()
+            requireContext().toast(getString(R.string.error_message_could_not_create_city))
+        }
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    private fun deleteCity(city: City) {
+        if (database.deleteCity(city)){
+            cities.remove(city)
+            adapter.notifyDataSetChanged()
+            requireContext().toast(getString(R.string.info_message_city_has_been_deleted, city.name))
+        } else {
+            requireContext().toast(getString(R.string.error_message_could_not_delete_city, city.name))
         }
     }
 
@@ -88,6 +113,6 @@ class CityFragment : Fragment(), CityAdapter.CityItemListener {
     }
 
     override fun onCityDeleted(city: City) {
-        TODO("Not yet implemented")
+        showDeleteCityDialog(city)
     }
 }
