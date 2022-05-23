@@ -1,16 +1,36 @@
 <resources>
     <string name="app_name">My Weather</string>
+
+    <!-- Create Dialog -->
     <string name="create_city_title">New City name ?</string>
     <string name="create_city_button">Create City</string>
     <string name="create_city_cancel">Cancel</string>
-    <string name="create_city_hint">New York, Paris...</string>
-    <string name="menu_create_city_button">Create city</string>
-    <string name="location_logo_item">Location Logo</string>
+    <string name="create_city_hint">New York, Paris…</string>
+
+    <!-- Delete Dialog -->
     <string name="delete_city_button">Delete city</string>
     <string name="delete_city_cancel">Cancel</string>
     <string name="delete_city_title">Do you really want to delete this %1$s?</string>
+
+    <!-- Content Description -->
+    <string name="menu_create_city_button">Create city</string>
     <string name="delete_item_button">delete item button</string>
+    <string name="location_logo_item">Location Logo</string>
+    <string name="actual_weather_icon">Actual weather icon</string>
+
+    <!-- Toasts -->
     <string name="error_message_could_not_create_city">Could not create city</string>
     <string name="error_message_could_not_delete_city">Could not delete %1$s</string>
     <string name="info_message_city_has_been_deleted">%1$s has been deleted</string>
+    <string name="error_message_could_not_load_city_weather">Could Not load city weather!</string>
+
+
+    <!-- Weather Fragment -->
+    <string name="weather_temperature_label">Temperature:</string>
+    <string name="weather_humidity_label">Humidity:</string>
+    <string name="weather_pressure_label">Pressure:</string>
+    <string name="weather_temperature_value">%1d °C</string>
+    <string name="weather_humidity_value">%1d %%</string>
+    <string name="weather_pressure_value">%1d hPa</string>
+
 </resources>
